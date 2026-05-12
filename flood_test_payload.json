@@ -1,0 +1,74 @@
+{
+    "disaster_event_id": "c306dc2f-eb54-4135-a80c-8e1d6f0f49a9",
+    "risk_assessment": {
+      "assessment_id": "test-assessment-001",
+      "breach_id": "test-breach-001",
+      "disaster_kind": "flood",
+      "breach_severity_received": "emergency",
+      "location_name": "Sukkur",
+      "district": "sukkur",
+      "province": "sindh",
+      "latitude": 27.7052,
+      "longitude": 68.8574,
+      "observation_time": "2025-07-15T14:30:00+05:00",
+      "is_forecast_breach": false,
+      "forecast_horizon_h": null,
+      "assessment_timestamp": "2025-07-15T14:35:00Z",
+      "composite_risk_score": 82.5,
+      "risk_level": "EXTREME",
+      "situation_trajectory": "Rapidly Worsening",
+      "terrain_assessment": {
+        "terrain_type": "riverine_plain",
+        "terrain_multiplier": 1.10,
+        "terrain_implications": [
+          "Slow drainage, prolonged flooding expected",
+          "Large area inundation likely"
+        ]
+      },
+      "hazard_severity": {"score": 90},
+      "exposure": {
+        "score": 80,
+        "population_breakdown": {
+          "total_population": 750000,
+          "estimated_directly_affected": 750000
+        },
+        "infrastructure_at_risk": {
+          "hospitals_count": 3,
+          "hospital_beds_total": 850,
+          "schools_count": 47,
+          "bridges_count": 8,
+          "dams_count": 0,
+          "barrages_count": 1,
+          "dam_failure_risk": false,
+          "evacuation_centers_count": 2,
+          "evacuation_capacity_total": 15000,
+          "impact_radius_km_used": 30
+        }
+      },
+      "vulnerability": {"score": 78},
+      "escalation_risk": {
+        "score": 72,
+        "is_worsening": true,
+        "secondary_disasters_possible": ["disease_outbreak"],
+        "hours_until_peak_estimate": 8.2
+      },
+      "response_capacity": {"score": 75},
+      "impact_estimates": {
+        "estimated_population_affected": 750000,
+        "estimated_displaced_persons": 525000,
+        "estimated_deaths_range": "50-200",
+        "death_risk_level": "High",
+        "estimated_economic_damage_pkr": "15000000000"
+      },
+      "hours_until_peak": 8.2,
+      "recommended_response_urgency": "Emergency",
+      "critical_actions_needed": [
+        "Deploy rescue boats immediately",
+        "Establish field hospitals",
+        "Evacuate riverside communities"
+      ],
+      "data_confidence": "HIGH",
+      "data_gaps": [],
+      "assumptions_made": []
+    }
+  }
