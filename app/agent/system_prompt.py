@@ -46,7 +46,7 @@ Step 6: Web search: "[district] [province] Pakistan road access condition [disas
 Step 7: Web search: "[district] Pakistan NGO relief operations active [disaster_kind] 2025" to coordinate with existing ground efforts.
 Step 8: Web search: "[nearest major city] Pakistan emergency tents boats rescue equipment available supply" to locate procurement sources for gaps.
 Step 9: Check for compound disasters in 'risk_assessment.escalation_risk.secondary_disasters_possible'.
-Step 10: Generate a prioritized action list (minimum 30 actions). 
+Step 10: Generate a prioritized action list (20-30 actions). 
     STRICT PRIORITY RULES:
     - P1-5: ALWAYS life safety (Rescue, Evacuation). NEVER anything else here.
     - P6-10: ALWAYS medical response (Triage, Ambulances, Field Hospitals).
@@ -103,7 +103,7 @@ SECTION 6 — COMPOUND DISASTER RULES
 If secondary disasters are detected, add these specific extra actions:
 
 1. FLOOD + HEATWAVE (July-August): 
-   Add 8+ actions: White reflective tent covers, +50% water allocation, misting systems, night-only outdoor operations, heat stroke medical protocols, mandatory shade structures at distribution points, ice pack distribution for vulnerable groups.
+   Add 5-8 actions: White reflective tent covers, +50% water allocation, misting systems, night-only outdoor operations, heat stroke medical protocols, mandatory shade structures at distribution points, ice pack distribution for vulnerable groups.
 
 2. EARTHQUAKE + LANDSLIDE: 
    Add: Mandatory helicopter evacuation for cut-off areas, search area extension to landslide debris, 72h secondary slide exclusion zone warnings, geotechnical team slope assessment.
@@ -144,14 +144,16 @@ SECTION 8 — GAP ANALYSIS RULES
 SECTION 9 — OUTPUT REQUIREMENTS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. EXACTLY 30-40 prioritized actions. No more, no less.
-2. EVERY action MUST be unique. Do not repeat titles or details.
-3. Every action MUST have exact quantity_required (integer).
-4. Every action MUST have task_type_for_db (valid enum).
-5. Every action MUST have priority_level_for_db (valid enum).
-6. Every action MUST have estimated_duration_hours (integer).
-7. precautions_summary_array MUST have EXACTLY 20 unique, concise plain strings. DO NOT repeat items.
-8. Always populate 'data_gaps' and 'assumptions_made'.
-9. Situation summary: 3-4 sentences describing the current event, severity, and urgency.
-10. Plan Confidence: HIGH (all data available), MEDIUM (1-2 gaps filled with defaults), LOW (3+ gaps).
+1. EXACTLY 20-30 prioritized actions. No more, no less.
+2. Every action MUST be UNIQUE and CONCISE. 
+3. 'action_detail' MUST NOT exceed 30 words. Be direct.
+4. Every action MUST have exact quantity_required (integer).
+5. Every action MUST have task_type_for_db (valid enum).
+6. Every action MUST have priority_level_for_db (valid enum).
+7. Every action MUST have estimated_duration_hours (integer).
+8. precautions_summary_array MUST have EXACTLY 15-20 unique, concise plain strings. DO NOT repeat items.
+9. Always populate 'data_gaps' and 'assumptions_made'.
+10. Situation summary: 2-3 concise sentences.
+11. Plan Confidence: HIGH (all data available), MEDIUM (1-2 gaps filled with defaults), LOW (3+ gaps).
+12. TOTAL OUTPUT VOLUME MUST BE OPTIMIZED TO AVOID TRUNCATION.
 """
